@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  background: #e4f2f9;
+  overscroll-behavior-y: contain;
+}
+
+.header {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: #1f77a3;
+}
+
+.name,
+.desc,
+.btn {
+  border: none;
+  margin-left: 20px;
+}
+
+.name,
+.desc {
+  color: #e4f2f9;
+  background: transparent;
+  font-size: 20px;
+  border-bottom: 2px solid #a1d7f1;
+  padding: 8px 1px;
+  width: 300px;
+
+  &:focus {
+    border-bottom: 2px solid white;
+    outline: none;
+  }
+
+  &:focus ::placeholder {
+    transform: translateY(10px);
+  }
+}
+
+.btn {
+  background: #fff;
+  padding: 10px 25px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #333;
+    background: #f7f7f7;
+  }
+}
+
+.heading {
+  color: #e4f2f9;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.card {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: 30px;
+
+  background: linear-gradient(
+      45deg,
+      rgba(36, 36, 36, 0.05) 0%,
+      rgba(36, 36, 36, 0.05) 4%,
+      rgba(22, 22, 22, 0.05) 4%,
+      rgba(22, 22, 22, 0.05) 100%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(60, 60, 60, 0.1) 0%,
+      rgba(60, 60, 60, 0.1) 29%,
+      rgba(96, 96, 96, 0.1) 29%,
+      rgba(96, 96, 96, 0.1) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(222, 222, 222, 0.1) 0%,
+      rgba(222, 222, 222, 0.1) 35%,
+      rgba(109, 109, 109, 0.1) 35%,
+      rgba(109, 109, 109, 0.1) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(206, 206, 206, 0.09) 0%,
+      rgba(206, 206, 206, 0.09) 14%,
+      rgba(10, 10, 10, 0.09) 14%,
+      rgba(10, 10, 10, 0.09) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(234, 234, 234, 0.06) 0%,
+      rgba(234, 234, 234, 0.06) 15%,
+      rgba(18, 18, 18, 0.06) 15%,
+      rgba(18, 18, 18, 0.06) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(237, 237, 237, 0.01) 0%,
+      rgba(237, 237, 237, 0.01) 55%,
+      rgba(206, 206, 206, 0.01) 55%,
+      rgba(206, 206, 206, 0.01) 100%
+    ),
+    linear-gradient(90deg, hsl(200, 100%, 36%), hsl(200, 100%, 36%));
+
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 16px;
+}
+
+.content {
+  position: relative;
+}
+
+.person {
+  font-size: 150px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  margin: auto;
+}
+
+.social-link {
+  list-style: none;
+
+  a {
+    color: #0a202a;
+    filter: brightness(70%);
+
+    &:hover {
+      color: #030b0f;
+    }
+  }
+}
+
+.title {
+  font-size: 28px;
+  margin: 8px 0;
+  letter-spacing: 0.7px;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 30%;
+    background: #add7ec;
+    margin: 8px auto;
+    opacity: 0.4;
+  }
+}
+
+.role {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 14px;
+  padding: 16px 0;
+  opacity: 0.8;
+}
+
+.delete {
+  align-self: flex-start;
+  margin-top: -20px;
+  margin-right: -10px;
+
+  i {
+    color: #eee;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .content {
+    text-align: left;
+    margin-left: 15%;
+  }
+
+  .title::after {
+    margin-left: 0;
+  }
+
+  .text {
+    margin-bottom: 20px;
+  }
+
+  .social-link i {
+    font-size: 20px;
+  }
+}

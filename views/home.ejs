@@ -1,0 +1,79 @@
+<link
+  href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/app.css" />
+
+<header class="header">
+  <h1 class="heading">
+    Subscription manager
+  </h1>
+  <form method="POST" action="/signup" class="form">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      class="name"
+      autocomplete="off"
+      required
+    />
+    <input
+      type="text"
+      name="role"
+      placeholder="Role"
+      class="desc"
+      autocomplete="off"
+      required
+    />
+    <button class="btn">Register</button>
+  </form>
+</header>
+
+<div class="cards">
+  <%results.forEach((user) => {%>
+
+  <div class="card">
+    <div class="sidebar">
+      <i class="ion-ios-person person"></i>
+      <ul class="social-links">
+        <li class="social-link">
+          <a aria-label="facebook" href=""
+            ><i class="icon ion-logo-facebook"></i
+          ></a>
+        </li>
+        <li class="social-link">
+          <a aria-label="skype" href=""><i class="icon ion-logo-skype"></i></a>
+        </li>
+        <li class="social-link">
+          <a aria-label="snapchat" href=""
+            ><i class="icon ion-logo-snapchat"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <h2 class="title"><%=user.name%></h2>
+      <h3 class="role"><%=user.role%></h3>
+      <p class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        optio odit obcaecati excepturi magnam reiciendis sit facere nobis illo
+        dolor?
+      </p>
+    </div>
+
+    <form method="POST" action="/" class="delete">
+      <input type="text" name="<%=user.name%>" />
+      <button style="border: none; background: transparent; outline: none;">
+        <i class="ion-ios-trash"></i>
+      </button>
+    </form>
+  </div>
+
+  <%})%>
+</div>
+
+<script>
+  window.onunload = function() {
+    window.scrollTo(0, 0)
+  }
+</script>

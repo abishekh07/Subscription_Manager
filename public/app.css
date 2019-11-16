@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,500,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  background: #e4f2f9;
+  overscroll-behavior-y: contain;
+}
+
+.header {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0;
+  background: #1f77a3;
+}
+
+.name,
+.desc,
+.btn {
+  border: none;
+  margin-left: 20px;
+}
+
+.name,
+.desc {
+  color: #e4f2f9;
+  background: transparent;
+  font-size: 20px;
+  border-bottom: 2px solid #a1d7f1;
+  padding: 8px 1px;
+  width: 300px;
+}
+
+.name:focus,
+.desc:focus {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+.name:focus ::-webkit-input-placeholder,
+.desc:focus ::-webkit-input-placeholder {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.name:focus :-ms-input-placeholder,
+.desc:focus :-ms-input-placeholder {
+  transform: translateY(10px);
+}
+
+.name:focus ::-ms-input-placeholder,
+.desc:focus ::-ms-input-placeholder {
+  transform: translateY(10px);
+}
+
+.name:focus ::placeholder,
+.desc:focus ::placeholder {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.btn {
+  background: #fff;
+  padding: 10px 25px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  color: #333;
+  background: #f7f7f7;
+}
+
+.heading {
+  color: #e4f2f9;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.card {
+  width: 80%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  margin: 30px;
+  background: linear-gradient(45deg, rgba(36, 36, 36, 0.05) 0%, rgba(36, 36, 36, 0.05) 4%, rgba(22, 22, 22, 0.05) 4%, rgba(22, 22, 22, 0.05) 100%), linear-gradient(45deg, rgba(60, 60, 60, 0.1) 0%, rgba(60, 60, 60, 0.1) 29%, rgba(96, 96, 96, 0.1) 29%, rgba(96, 96, 96, 0.1) 100%), linear-gradient(90deg, rgba(222, 222, 222, 0.1) 0%, rgba(222, 222, 222, 0.1) 35%, rgba(109, 109, 109, 0.1) 35%, rgba(109, 109, 109, 0.1) 100%), linear-gradient(0deg, rgba(206, 206, 206, 0.09) 0%, rgba(206, 206, 206, 0.09) 14%, rgba(10, 10, 10, 0.09) 14%, rgba(10, 10, 10, 0.09) 100%), linear-gradient(135deg, rgba(234, 234, 234, 0.06) 0%, rgba(234, 234, 234, 0.06) 15%, rgba(18, 18, 18, 0.06) 15%, rgba(18, 18, 18, 0.06) 100%), linear-gradient(90deg, rgba(237, 237, 237, 0.01) 0%, rgba(237, 237, 237, 0.01) 55%, rgba(206, 206, 206, 0.01) 55%, rgba(206, 206, 206, 0.01) 100%), linear-gradient(90deg, #007ab8, #007ab8);
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 16px;
+}
+
+.content {
+  position: relative;
+}
+
+.person {
+  font-size: 150px;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90px;
+  margin: auto;
+}
+
+.social-link {
+  list-style: none;
+}
+
+.social-link a {
+  color: #0a202a;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.social-link a:hover {
+  color: #030b0f;
+}
+
+.title {
+  font-size: 28px;
+  margin: 8px 0;
+  letter-spacing: 0.7px;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 30%;
+  background: #add7ec;
+  margin: 8px auto;
+  opacity: 0.4;
+}
+
+.role {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 14px;
+  padding: 16px 0;
+  opacity: 0.8;
+}
+
+.delete {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: -20px;
+  margin-right: -10px;
+}
+
+.delete i {
+  color: #eee;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.delete i:hover {
+  color: #ccc;
+}
+
+.delete input {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .content {
+    text-align: left;
+    margin-left: 15%;
+  }
+  .title::after {
+    margin-left: 0;
+  }
+  .text {
+    margin-bottom: 20px;
+  }
+  .social-link i {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=app.css.map */
